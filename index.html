@@ -288,6 +288,19 @@ h1,h2,.serif{font-family:'Playfair Display','Poppins',serif;letter-spacing:-1px}
   .plate-img{width:120px!important;height:120px!important}
   #mascot{width:60px;height:60px}
 }
+/* ── HERO FOOD LOGOS — FIX MOBILE (stop tremblement + overflow) ── */
+@media(max-width:640px){
+  #heroImg-burger,#heroImg-pizza,#heroImg-dessert,#heroImg-cocktail,#heroImg-salade,#heroImg-boisson{
+    animation:none!important;
+    will-change:auto!important;
+  }
+  #heroImg-burger{width:68px!important;height:68px!important;top:-16px!important;left:-6px!important}
+  #heroImg-pizza{width:76px!important;height:76px!important;top:-16px!important;right:-10px!important}
+  #heroImg-dessert{width:60px!important;height:60px!important;bottom:-14px!important;left:-6px!important}
+  #heroImg-cocktail{width:56px!important;height:56px!important;bottom:-16px!important;right:-4px!important}
+  #heroImg-salade{width:52px!important;height:52px!important;left:-10px!important;transform:translateY(-50%)!important}
+  #heroImg-boisson{width:46px!important;height:46px!important;right:-6px!important;transform:translateY(-50%)!important}
+}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
 /* ── HEADER PILL — VisionOS Frosted ── */
