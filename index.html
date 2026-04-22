@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>NeoBistro — Alpha Korner Strasbourg</title>
+<title>LEO.AI Service PRO</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -38,33 +38,81 @@
 html,body{margin:0;padding:0}
 body{font-family:'Poppins',sans-serif;background:#000;min-height:100vh;color:var(--ink);overflow-x:hidden;position:relative;}
 
-/* ── FOND VIDÉO CANVA — plein écran sur toutes les pages ── */
-#bgDecor{position:fixed;inset:0;z-index:-10;overflow:hidden;pointer-events:none;}
-/* iframe cover — conserve le ratio 16:9 tout en couvrant 100% de l'écran */
-#bgDecor iframe{
+/* ── RAIN BACKGROUND — UIverse SelfMadeSystem ── */
+#bgDecor{
+  position:fixed;inset:0;z-index:-10;overflow:hidden;pointer-events:none;
+  --c:#09f;
+  background-color:#000;
+  background-image:
+    radial-gradient(4px 100px at 0px 235px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 235px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 117.5px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 252px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 252px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 126px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 150px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 150px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 75px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 253px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 253px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 126.5px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 204px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 204px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 102px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 134px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 134px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 67px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 179px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 179px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 89.5px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 299px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 299px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 149.5px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 215px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 215px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 107.5px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 281px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 281px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 140.5px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 158px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 158px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 79px,var(--c) 100%,#0000 150%),
+    radial-gradient(4px 100px at 0px 210px,var(--c),#0000),
+    radial-gradient(4px 100px at 300px 210px,var(--c),#0000),
+    radial-gradient(1.5px 1.5px at 150px 105px,var(--c) 100%,#0000 150%);
+  background-size:
+    300px 235px,300px 235px,300px 235px,
+    300px 252px,300px 252px,300px 252px,
+    300px 150px,300px 150px,300px 150px,
+    300px 253px,300px 253px,300px 253px,
+    300px 204px,300px 204px,300px 204px,
+    300px 134px,300px 134px,300px 134px,
+    300px 179px,300px 179px,300px 179px,
+    300px 299px,300px 299px,300px 299px,
+    300px 215px,300px 215px,300px 215px,
+    300px 281px,300px 281px,300px 281px,
+    300px 158px,300px 158px,300px 158px,
+    300px 210px,300px 210px,300px 210px;
+  animation:rainFall 150s linear infinite;
+}
+#bgDecor::after{
+  content:"";
   position:absolute;
-  top:50%;left:50%;
-  width:100vw;height:56.25vw;   /* 16:9 */
-  min-width:177.78vh;min-height:100vh; /* portrait override */
-  transform:translate(-50%,-50%);
-  border:none;
-  pointer-events:none;
-}
-/* overlay sombre pour lisibilité du contenu au-dessus */
-#bgDecor .bg-overlay{
-  position:absolute;inset:0;
-  background:rgba(4,4,14,0.52);
-  backdrop-filter:none;
-  pointer-events:none;
+  inset:0;
   z-index:1;
+  background-image:radial-gradient(circle at 50% 50%,#0000 0,#0000 2px,hsl(0 0 4%) 2px);
+  background-size:8px 8px;
+  --f:blur(1em) brightness(6);
+  animation:rainGlow 10s linear infinite;
 }
-#bgDecor .dots{display:none}
-#bgDecor .glow-top{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 70% 50% at 50% -5%,rgba(99,102,241,.12),transparent),radial-gradient(ellipse 40% 30% at 18% 8%,rgba(59,130,246,.06),transparent);}
-#bgDecor .glow-bot{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 65% 45% at 68% 112%,rgba(56,189,248,.07),transparent);}
-#bgDecor .orb1{position:absolute;z-index:2;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.12) 0%,transparent 70%);top:-250px;left:-120px;animation:orbDrift 22s ease-in-out infinite;}
-#bgDecor .orb2{position:absolute;z-index:2;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.10) 0%,transparent 70%);bottom:-180px;right:-100px;animation:orbDrift 28s ease-in-out infinite reverse;}
-@keyframes orbDrift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(60px,-40px) scale(1.1)}66%{transform:translate(-40px,60px) scale(.92)}}
-#noiseCanvas{position:absolute;inset:0;z-index:3;width:100vw;height:100vh;image-rendering:pixelated;pointer-events:none;opacity:.25}
+@keyframes rainGlow{
+  0%{backdrop-filter:var(--f) hue-rotate(0deg)}
+  to{backdrop-filter:var(--f) hue-rotate(360deg)}
+}
+@keyframes rainFall{
+  0%{background-position:0px 220px,3px 220px,151.5px 337.5px,25px 24px,28px 24px,176.5px 150px,50px 16px,53px 16px,201.5px 91px,75px 224px,78px 224px,226.5px 350.5px,100px 19px,103px 19px,251.5px 121px,125px 120px,128px 120px,276.5px 187px,150px 31px,153px 31px,301.5px 120.5px,175px 235px,178px 235px,326.5px 384.5px,200px 121px,203px 121px,351.5px 228.5px,225px 224px,228px 224px,376.5px 364.5px,250px 26px,253px 26px,401.5px 105px,275px 75px,278px 75px,426.5px 180px}
+  to{background-position:0px 6800px,3px 6800px,151.5px 6917.5px,25px 13632px,28px 13632px,176.5px 13758px,50px 5416px,53px 5416px,201.5px 5491px,75px 17175px,78px 17175px,226.5px 17301.5px,100px 5119px,103px 5119px,251.5px 5221px,125px 8428px,128px 8428px,276.5px 8495px,150px 9876px,153px 9876px,301.5px 9965.5px,175px 13391px,178px 13391px,326.5px 13540.5px,200px 14741px,203px 14741px,351.5px 14848.5px,225px 18770px,228px 18770px,376.5px 18910.5px,250px 5082px,253px 5082px,401.5px 5161px,275px 6375px,278px 6375px,426.5px 6480px}
+}
 
 /* ── GLASS CARD — VisionOS Spatial UI ── */
 .glass-card{
@@ -378,34 +426,77 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
 
 /* ── BOUTON PULSE RESTAURATEUR ── */
 @keyframes btnPulse{0%,100%{box-shadow:0 8px 30px rgba(37,99,235,.4),0 0 0 0 rgba(59,130,246,.4)}50%{box-shadow:0 8px 30px rgba(37,99,235,.4),0 0 0 8px rgba(59,130,246,0)}}
+
+/* ══════════════════════════════════════════════════════════════
+   CUSTOM LOADER — UIverse Animated Spinner
+══════════════════════════════════════════════════════════════ */
+.loader {
+  --color-one: #ffbf48;
+  --color-two: #be4a1d;
+  --color-three: #ffbf4780;
+  --color-four: #bf4a1d80;
+  --color-five: #ffbf4740;
+  --time-animation: 2s;
+  --size: 1.5;
+  position: relative;
+  border-radius: 50%;
+  transform: scale(var(--size));
+  box-shadow:
+    0 0 25px 0 var(--color-three),
+    0 20px 50px 0 var(--color-four);
+  animation: colorize calc(var(--time-animation) * 3) ease-in-out infinite;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: solid 1px var(--color-one);
+  border-bottom: solid 1px var(--color-two);
+  background: linear-gradient(180deg, var(--color-five), var(--color-four));
+  box-shadow:
+    inset 0 10px 10px 0 var(--color-three),
+    inset 0 -10px 10px 0 var(--color-four);
+}
+.loader .box {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(180deg, var(--color-one) 30%, var(--color-two) 70%);
+  mask: url(#clipping);
+  -webkit-mask: url(#clipping);
+}
+.loader svg { position: absolute; }
+.loader svg #clipping { filter: contrast(15); animation: roundness calc(var(--time-animation) / 2) linear infinite; }
+.loader svg #clipping polygon { filter: blur(7px); }
+.loader svg #clipping polygon:nth-child(1) { transform-origin: 75% 25%; transform: rotate(90deg); }
+.loader svg #clipping polygon:nth-child(2) { transform-origin: 50% 50%; animation: rotation var(--time-animation) linear infinite reverse; }
+.loader svg #clipping polygon:nth-child(3) { transform-origin: 50% 60%; animation: rotation var(--time-animation) linear infinite; animation-delay: calc(var(--time-animation) / -3); }
+.loader svg #clipping polygon:nth-child(4) { transform-origin: 40% 40%; animation: rotation var(--time-animation) linear infinite reverse; }
+.loader svg #clipping polygon:nth-child(5) { transform-origin: 40% 40%; animation: rotation var(--time-animation) linear infinite reverse; animation-delay: calc(var(--time-animation) / -2); }
+.loader svg #clipping polygon:nth-child(6) { transform-origin: 60% 40%; animation: rotation var(--time-animation) linear infinite; }
+.loader svg #clipping polygon:nth-child(7) { transform-origin: 60% 40%; animation: rotation var(--time-animation) linear infinite; animation-delay: calc(var(--time-animation) / -1.5); }
+@keyframes rotation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes roundness { 0% { filter: contrast(15); } 20% { filter: contrast(3); } 40% { filter: contrast(3); } 60% { filter: contrast(15); } 100% { filter: contrast(15); } }
+@keyframes colorize { 0% { filter: hue-rotate(0deg); } 20% { filter: hue-rotate(-30deg); } 40% { filter: hue-rotate(-60deg); } 60% { filter: hue-rotate(-90deg); } 80% { filter: hue-rotate(-45deg); } 100% { filter: hue-rotate(0deg); } }
+#loadingScreen { position:fixed;inset:0;z-index:999; display:flex;flex-direction:column;align-items:center;justify-content:center; background:#000; opacity:0;transition:opacity .3s;pointer-events:none; }
+#loadingScreen.show { opacity:1;pointer-events:auto }
+#loadingScreen .loader-text { color:#ffbf48;font-size:14px;font-weight:700; margin-top:40px;letter-spacing:2px;text-transform:uppercase; animation:pulse 1.5s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:.6} 50%{opacity:1} }
+.button { position:relative; display:inline-flex;align-items:center;justify-content:center; padding:14px 32px;font-size:16px;font-weight:700; color:#fff;background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%); border:none;border-radius:12px;cursor:pointer;overflow:hidden; box-shadow:0 8px 28px rgba(37,99,235,.45),inset 0 1px 0 rgba(255,255,255,.22); transition:all .3s cubic-bezier(.4,0,.2,1); font-family:inherit;text-transform:uppercase;letter-spacing:1px; }
+.button::before { content:"";position:absolute;inset:0; background:linear-gradient(135deg,rgba(255,255,255,.2),transparent); opacity:0;transition:opacity .3s;pointer-events:none; }
+.button:hover { background:linear-gradient(135deg,#60a5fa 0%,#3b82f6 100%); transform:translateY(-3px); box-shadow:0 16px 45px rgba(37,99,235,.6),inset 0 1px 0 rgba(255,255,255,.28); }
+.button:hover::before { opacity:1 }
+.button:active { transform:translateY(-1px) }
+@media(max-width:768px) { .glass-card{padding:16px!important} .hero-title{font-size:32px!important} .max-w-md{max-width:100%!important;padding:0 16px!important} .max-w-2xl{max-width:100%!important;padding:0 16px!important} .max-w-3xl{max-width:100%!important;padding:0 16px!important} }
 </style>
 </head>
 <body>
 
-<!-- ═══ FOND VIDÉO CANVA — plein écran toutes pages ═══ -->
-<div id="bgDecor">
-  <!-- Vidéo Canva en cover -->
-  <iframe loading="lazy"
-    src="https://www.canva.com/design/DAHHhooeEoI/z46FvzQP9OynX5x5wfGKfQ/watch?embed&autoplay=1&loop=1"
-    allowfullscreen="allowfullscreen"
-    allow="fullscreen; autoplay"
-    title="Background video">
-  </iframe>
-  <!-- Overlay sombre pour lisibilité -->
-  <div class="bg-overlay"></div>
-  <!-- Effets lumineux animés par-dessus la vidéo -->
-  <div class="dots"></div>
-  <div class="glow-top"></div>
-  <div class="glow-bot"></div>
-  <div class="orb1"></div>
-  <div class="orb2"></div>
-  <canvas id="noiseCanvas"></canvas>
-</div>
-
-<div id="bgStage">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-  <div class="shape s1"></div><div class="shape s2"></div><div class="shape s3"></div><div class="shape s4"></div>
-</div>
+<!-- ═══ RAIN BACKGROUND — UIverse SelfMadeSystem ═══ -->
+<div id="bgDecor"></div>
 
 <!-- ═══ PAGE LOADER ═══ -->
 <div id="pageLoader"><div class="spinner-ring"></div></div>
@@ -499,10 +590,7 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
     </div>
 
     <div class="glass-card rounded-[36px] p-8 mb-8 reveal">
-      <p style="color:#fff;font-size:15px;margin-bottom:28px;line-height:1.7">
-        Commande directement depuis ta table, sans attendre.<br>
-        Notre serveur virtuel Léo t'accompagne du début à la fin du repas.
-      </p>
+      <p style="color:#fff;font-size:15px;margin-bottom:28px;line-height:1.7;text-wrap:balance;text-align:center">Commande directement depuis ta table, sans attendre. Notre serveur virtuel Léo t'accompagne du début à la fin du repas.</p>
       <button class="btn-neo btn-blue big" onclick="Router.go('login')">
         COMMANDER UN PLAT
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -1996,8 +2084,6 @@ function initWaveDots(){
 State.load();
 initFoodImages();
 buildClusters();
-initNoise();
-initWaveDots();
 requestAnimationFrame(()=>{ initHero3D(); initReveal(); });
 console.log('%c NeoBistro — SPATIAL UI / VisionOS ','background:#3b82f6;color:#fff;font-weight:bold;padding:4px 12px;border-radius:4px;font-size:14px');
 console.log('Ouvre plusieurs onglets (client + admin + cuisine) pour voir la sync temps réel.');
@@ -2005,3 +2091,11 @@ console.log('Ouvre plusieurs onglets (client + admin + cuisine) pour voir la syn
 
 </body>
 </html>
+
+
+
+
+
+
+
+
