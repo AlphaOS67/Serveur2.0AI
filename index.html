@@ -17,10 +17,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
-/* ══════════════════════════════════════════════════════════════
+/* 
    SPATIAL UI — VisionOS × Glassmorphism  (Apple Vision Pro)
    Fond sombre · Blur prononcé · Specular highlights
-══════════════════════════════════════════════════════════════ */
+ */
 :root{
   --glass-bg:     rgba(8,8,16,0.75);
   --glass-border: rgba(255,255,255,0.09);
@@ -386,9 +386,9 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
 /* ── BOUTON PULSE RESTAURATEUR ── */
 @keyframes btnPulse{0%,100%{box-shadow:0 8px 30px rgba(37,99,235,.4),0 0 0 0 rgba(59,130,246,.4)}50%{box-shadow:0 8px 30px rgba(37,99,235,.4),0 0 0 8px rgba(59,130,246,0)}}
 
-/* ══════════════════════════════════════════════════════════════
+/* 
    CUSTOM LOADER — UIverse Animated Spinner
-══════════════════════════════════════════════════════════════ */
+ */
 .loader {
   --color-one: #ffbf48;
   --color-two: #be4a1d;
@@ -444,7 +444,7 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
 #loadingScreen.show { opacity:1;pointer-events:auto }
 #loadingScreen .loader-text { color:#ffbf48;font-size:14px;font-weight:700; margin-top:40px;letter-spacing:2px;text-transform:uppercase; animation:pulse 1.5s ease-in-out infinite; }
 
-/* ══ RESPONSIVE MOBILE OPTIMISATION ══ */
+/*  RESPONSIVE MOBILE OPTIMISATION  */
 @media(max-width:640px){
   .screen{padding:8px 16px 160px 16px!important}
   .header-pill{margin:6px auto 16px;width:calc(100% - 32px)!important;max-width:none!important}
@@ -477,7 +477,7 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
 .button:active { transform:translateY(-1px) }
 @media(max-width:768px) { .glass-card{padding:16px!important} .hero-title{font-size:32px!important} .max-w-md{max-width:100%!important;padding:0 16px!important} .max-w-2xl{max-width:100%!important;padding:0 16px!important} .max-w-3xl{max-width:100%!important;padding:0 16px!important} }
 
-/* ══ LOGIN CARD — Plus clair et visible ══ */
+/*  LOGIN CARD — Plus clair et visible  */
 #scr-login .glass-card,
 #scr-table .glass-card {
   background:rgba(20,25,45,0.88)!important;
@@ -522,10 +522,10 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
 <body>
 
 <div id="loadingScreen"><div class="loader"><svg width="100" height="100" viewBox="0 0 100 100"><defs><mask id="clipping"><polygon points="0,0 100,0 100,100 0,100" fill="black"></polygon><polygon points="25,25 75,25 50,75" fill="white"></polygon><polygon points="50,25 75,75 25,75" fill="white"></polygon><polygon points="35,35 65,35 50,65" fill="white"></polygon></mask></defs></svg><div class="box"></div></div><div class="loader-text">Chargement</div></div>
-<!-- ═══ RAIN BACKGROUND — UIverse SelfMadeSystem ═══ -->
+<!-- RAIN BACKGROUND -->
 <div id="bgDecor"></div>
 
-<!-- ═══ FLOATING UTENSILS ═══ -->
+<!-- FLOATING UTENSILS -->
 <svg class="utensil knife" style="left:15%;top:5%" viewBox="0 0 40 120" xmlns="http://www.w3.org/2000/svg"><path d="M20 5 L18 50 L22 50 L20 110 L22 115 L18 115 Z" fill="#48f5" stroke="#48f" stroke-width="1"/><circle cx="20" cy="20" r="8" fill="#48f5" opacity=".6"/></svg>
 <svg class="utensil fork" style="left:25%;top:15%" viewBox="0 0 35 115" xmlns="http://www.w3.org/2000/svg"><line x1="17.5" y1="10" x2="17.5" y2="50" stroke="#48f5" stroke-width="2.5"/><path d="M10 50 L10 115 M17.5 50 L17.5 115 M25 50 L25 115" stroke="#48f5" stroke-width="2" fill="none"/><circle cx="17.5" cy="25" r="6" fill="#48f5" opacity=".5"/></svg>
 <svg class="utensil spoon" style="left:8%;top:25%" viewBox="0 0 38 110" xmlns="http://www.w3.org/2000/svg"><ellipse cx="19" cy="25" rx="10" ry="12" fill="#48f5" opacity=".6"/><line x1="19" y1="37" x2="19" y2="110" stroke="#48f5" stroke-width="2.5"/><circle cx="19" cy="45" r="5" fill="#48f5" opacity=".4"/></svg>
@@ -534,10 +534,10 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
 <svg class="utensil fork" style="right:12%;top:50%" viewBox="0 0 35 115" xmlns="http://www.w3.org/2000/svg"><line x1="17.5" y1="10" x2="17.5" y2="50" stroke="#48f5" stroke-width="2.5"/><path d="M10 50 L10 115 M17.5 50 L17.5 115 M25 50 L25 115" stroke="#48f5" stroke-width="2" fill="none"/><circle cx="17.5" cy="25" r="6" fill="#48f5" opacity=".5"/></svg>
 <svg class="utensil spoon" style="right:32%;top:65%" viewBox="0 0 38 110" xmlns="http://www.w3.org/2000/svg"><ellipse cx="19" cy="25" rx="10" ry="12" fill="#48f5" opacity=".6"/><line x1="19" y1="37" x2="19" y2="110" stroke="#48f5" stroke-width="2.5"/><circle cx="19" cy="45" r="5" fill="#48f5" opacity=".4"/></svg>
 
-<!-- ═══ PAGE LOADER ═══ -->
+<!-- PAGE LOADER -->
 <div id="pageLoader"><div class="spinner-ring"></div></div>
 
-<!-- ═══ MASCOTTE ═══ -->
+<!-- MASCOTTE -->
 <svg id="mascot" viewBox="0 0 100 100" onclick="Avatar.toggleBubble()">
   <defs>
     <linearGradient id="bodyG" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -567,11 +567,11 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
   <span id="bubbleText">Salut ! Je suis Léo, ton serveur virtuel 🍽️</span>
 </div>
 
-<!-- ═══ TOAST ═══ -->
+<!-- \1 -->
 <div id="toast"></div>
 
 
-<!-- ═══ 1. LANDING ═══ -->
+<!-- \1 -->
 <section id="scr-landing" class="screen active">
   <div class="max-w-2xl mx-auto text-center">
     <header class="header-pill mb-8" style="margin-top:12px">
@@ -653,7 +653,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
       </div>
     </div>
 
-    <!-- ═══ PARTAGE RÉSEAUX SOCIAUX ═══ -->
+    <!-- \1 -->
     <div class="glass-card rounded-[28px] p-6 mb-6 reveal" style="background:rgba(8,8,20,.7)">
       <p style="color:#fff;font-size:14px;font-weight:700;margin-bottom:4px">✨ Vivez l'expérience NeoBistro !</p>
       <p style="color:rgba(200,214,255,.6);font-size:12px;margin-bottom:16px">Partagez cette aventure avant même de la commencer 🚀</p>
@@ -681,7 +681,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
       </div>
     </div>
 
-    <!-- ═══ BLOC RESTAURATEUR ═══ -->
+    <!-- \1 -->
     <div class="reveal" style="margin-bottom:40px">
       <!-- Titre section dans un conteneur distinct -->
       <div style="background:rgba(8,8,18,.75);border:1.5px solid rgba(59,130,246,.35);border-radius:24px;padding:32px 24px;text-align:center;margin-bottom:24px;backdrop-filter:blur(52px) saturate(200%);-webkit-backdrop-filter:blur(52px) saturate(200%);box-shadow:0 8px 40px rgba(0,0,0,.7),0 2px 8px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08),inset 0 -1px 0 rgba(255,255,255,.02),0 0 50px rgba(59,130,246,.1)">
@@ -731,10 +731,10 @@ Clique sur le bouton ci-dessous pour commencer !</p>
       </div>
 
       <!-- CTA bouton dans un conteneur glass -->
-      <div style="background:rgba(8,8,20,.72);backdrop-filter:blur(40px) saturate(180%);-webkit-backdrop-filter:blur(40px) saturate(180%);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 8px 32px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.08)">
+      <div style="background:rgba(8,8,20,.72);backdrop-filter:blur(40px) saturate(180%);-webkit-backdrop-filter:blur(40px) saturate(180%);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:28px 24px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.08)">
         <div>
-          <p style="color:#fff;font-weight:800;font-size:14px;margin:0 0 2px">🚀 Voir la solution complète</p>
-          <p style="color:#fff;font-size:11px;margin:0">Démo gratuite · Intégration en 5 min · Sans engagement</p>
+          <p style="color:#fff;font-weight:800;font-size:16px;margin:0 0 4px">🚀 Voir la solution complète</p>
+          <p style="color:#f1f5f9;font-size:12px;margin:0;letter-spacing:.3px">Démo gratuite · Intégration en 5 min · Sans engagement</p>
         </div>
         <button onclick="alert('Contactez-nous à contact@neobistro.fr')" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:14px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;font-weight:800;font-size:13px;border:none;cursor:pointer;box-shadow:0 6px 20px rgba(37,99,235,.4);font-family:inherit;transition:all .3s;white-space:nowrap;animation:btnPulse 2.5s ease-in-out infinite" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
           Commencer
@@ -760,7 +760,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </section>
 
-<!-- ═══ 2. LOGIN CLIENT ═══ -->
+<!-- \1 -->
 <section id="scr-login" class="screen">`n  <div style="display:flex;align-items:center;justify-content:center;min-height:100vh"><div class="max-w-md mx-auto pt-4">
     <div class="glass-card rounded-[36px] p-8">
       <div class="text-center mb-6">
@@ -794,7 +794,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </section>
 
-<!-- ═══ 3. TABLE ═══ -->
+<!-- \1 -->
 <section id="scr-table" class="screen">`n  <div style="display:flex;align-items:center;justify-content:center;min-height:100vh"><div class="max-w-md mx-auto pt-4">
     <div class="glass-card rounded-[36px] p-8">
       <div class="text-center mb-6">
@@ -813,7 +813,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
   </div>`n</section>
 
-<!-- ═══ 4. MENU ═══ -->
+<!-- \1 -->
 <section id="scr-menu" class="screen">
   <div class="max-w-3xl mx-auto">
     <header class="header-pill mb-6 mt-2">
@@ -852,7 +852,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </footer>
 </section>
 
-<!-- ═══ 5. RUNNING ═══ -->
+<!-- \1 -->
 <section id="scr-running" class="screen">
   <div class="max-w-xl mx-auto pt-4">
     <div class="glass-card rounded-[36px] p-8 text-center">
@@ -882,7 +882,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </section>
 
-<!-- ═══ 6. COOKING ═══ -->
+<!-- \1 -->
 <section id="scr-cooking" class="screen">
   <div class="max-w-xl mx-auto pt-2">
     <div class="glass-card rounded-[36px] p-6 mb-5 text-center">
@@ -956,7 +956,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </section>
 
-<!-- ═══ 7. ENJOY ═══ -->
+<!-- \1 -->
 <section id="scr-enjoy" class="screen">
   <div class="max-w-xl mx-auto pt-4">
     <div class="glass-card rounded-[36px] p-8 text-center">
@@ -977,7 +977,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </section>
 
-<!-- ═══ 8. STAFF LOGIN ═══ -->
+<!-- \1 -->
 <section id="scr-staff-login" class="screen">
   <div class="max-w-md mx-auto pt-4">
     <div class="glass-card rounded-[36px] p-8">
@@ -1004,7 +1004,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </section>
 
-<!-- ═══ 9. KDS ═══ -->
+<!-- \1 -->
 <section id="scr-kds" class="screen dark-sec">
   <div class="max-w-7xl mx-auto p-4 pt-6">
     <header class="header-pill mb-6">
@@ -1034,7 +1034,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </section>
 
-<!-- ═══ 10. ADMIN ═══ -->
+<!-- \1 -->
 <section id="scr-admin" class="screen dark-sec">
   <div class="max-w-7xl mx-auto p-4 pt-6">
     <header class="header-pill mb-6">
@@ -1112,7 +1112,7 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </section>
 
-<!-- ═══ MODAL : APPEL SERVEUR ═══ -->
+<!-- \1 -->
 <div id="mdWaiter" class="modal">
   <div class="modal-card">
     <div class="modal-close" onclick="Waiter.close()">✕</div>
@@ -1128,12 +1128,12 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </div>
 
-<!-- ═══ MODAL : DÉTAIL PRODUIT ═══ -->
+<!-- \1 -->
 <div id="mdProduct" class="modal">
   <div class="modal-card" id="mdProductBody"></div>
 </div>
 
-<!-- ═══ MODAL : BIENVENUE ═══ -->
+<!-- \1 -->
 <div id="mdWelcome" class="modal">
   <div class="modal-card">
     <div class="modal-close" onclick="Client.closeWelcome()">✕</div>
@@ -1203,12 +1203,12 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </div>
 
-<!-- ═══ MODAL : OFFRE ═══ -->
+<!-- \1 -->
 <div id="mdOffer" class="modal">
   <div class="modal-card" id="mdOfferBody"></div>
 </div>
 
-<!-- ═══ MODAL : ADDITION ═══ -->
+<!-- \1 -->
 <div id="mdBillReason" class="modal">
   <div class="modal-card">
     <div class="modal-close" onclick="Modal.close('mdBillReason')">✕</div>
@@ -1222,11 +1222,11 @@ Clique sur le bouton ci-dessous pour commencer !</p>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- 
      JAVASCRIPT ENGINE
-═══════════════════════════════════════════════════════════ -->
+ -->
 <script>
-/* ═══ STATE ═══ */
+/*  STATE  */
 const State = {
   user:null, userRole:null, table:null,
   cart:[], activeOrderId:null, cookMins:15, restoName:'NeoBistro', patronMail:'patron@neobistro.fr',
@@ -1275,7 +1275,7 @@ const State = {
   }
 };
 
-/* ═══ BROADCAST CHANNEL ═══ */
+/*  BROADCAST CHANNEL  */
 let BC=null;
 try{
   BC = new BroadcastChannel('neobistro-v2');
@@ -1306,7 +1306,7 @@ const Sync = {
   }
 };
 
-/* ═══ AUTH ═══ */
+/*  AUTH  */
 const Auth = {
   googleLogin(){
     State.user = {email:'client@google.com',name:'Invité Google',provider:'google'};
@@ -1340,7 +1340,7 @@ const Auth = {
   }
 };
 
-/* ═══ ROUTER ═══ */
+/*  ROUTER  */
 const Router = {
   _busy:false,
   go(screen){
@@ -1362,7 +1362,7 @@ const Router = {
 };
 
 
-/* ═══ LOADER CONTROL ═══ */
+/*  LOADER CONTROL  */
 const LoaderControl = {
   show(){
     const loader = document.getElementById('loadingScreen');
@@ -1384,7 +1384,7 @@ Router.go = function(screen){
   }, 200);
 };
 
-/* ═══ AVATAR ═══ */
+/*  AVATAR  */
 const Avatar = {
   bubbleVisible:false, timer:null,
   say(txt, stay=5000){
@@ -1413,7 +1413,7 @@ const Avatar = {
   }
 };
 
-/* ═══ TOAST ═══ */
+/*  TOAST  */
 const Toast = {
   t:null,
   show(msg, ms=2500){
@@ -1424,13 +1424,13 @@ const Toast = {
   }
 };
 
-/* ═══ MODAL ═══ */
+/*  MODAL  */
 const Modal = {
   open(id){ document.getElementById(id).classList.add('open'); },
   close(id){ document.getElementById(id).classList.remove('open'); }
 };
 
-/* ═══ CLIENT ═══ */
+/*  CLIENT  */
 const Client = {
   confirmTable(){
     const n = parseInt(document.getElementById('tableNumInput').value);
@@ -1560,7 +1560,7 @@ const Client = {
   }
 };
 
-/* ═══ CART ═══ */
+/*  CART  */
 const Cart = {
   add(id){
     const it = State.menu.find(x=>x.id===id);
@@ -1616,7 +1616,7 @@ const Cart = {
   }
 };
 
-/* ═══ WAITER CALL ═══ */
+/*  WAITER CALL  */
 const Waiter = {
   selected:new Set(),
   open(){
@@ -1646,7 +1646,7 @@ const Waiter = {
   }
 };
 
-/* ═══ KDS ═══ */
+/*  KDS  */
 const Kds = {
   init(){
     document.getElementById('kdsRoleLabel').textContent = State.userRole.toUpperCase();
@@ -1735,7 +1735,7 @@ const Kds = {
   }
 };
 
-/* ═══ ADMIN ═══ */
+/*  ADMIN  */
 const Admin = {
   init(){
     document.getElementById('sCookMin').value = State.cookMins;
@@ -1892,14 +1892,14 @@ const Admin = {
   }
 };
 
-/* ═══ KEYBOARD ═══ */
+/*  KEYBOARD  */
 document.addEventListener('keydown', e=>{
   if(e.key==='Escape'){
     document.querySelectorAll('.modal.open').forEach(m=>m.classList.remove('open'));
   }
 });
 
-/* ═══ THREE.JS HERO SCENE ═══ */
+/*  THREE.JS HERO SCENE  */
 function initHero3D(){
   const canvas = document.getElementById('heroCanvas');
   if(!canvas || !window.THREE) return;
@@ -1958,7 +1958,7 @@ function initHero3D(){
   });
 }
 
-/* ═══ GSAP REVEAL ═══ */
+/*  GSAP REVEAL  */
 function initReveal(){
   if(!window.gsap) return;
   if(window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
@@ -1970,7 +1970,7 @@ function initReveal(){
   });
 }
 
-/* ═══ CUBE CLUSTER GENERATOR ═══ */
+/*  CUBE CLUSTER GENERATOR  */
 function buildClusters(){
   const faces = '<div class="face f1"></div><div class="face f2"></div><div class="face f3"></div><div class="face f4"></div><div class="face f5"></div><div class="face f6"></div>';
   const cubes = [1,2,3,4,5,6,7].map(i=>`<div class="mini-cube c${i}"><div class="cube-inner">${faces}</div></div>`).join('');
@@ -1980,7 +1980,7 @@ function buildClusters(){
   });
 }
 
-/* ═══ NOISE CANVAS ═══ */
+/*  NOISE CANVAS  */
 function initNoise(){
   const c = document.getElementById('noiseCanvas');
   if(!c) return;
@@ -2010,7 +2010,7 @@ function initNoise(){
   loop();
 }
 
-/* ═══ FOOD IMAGE GENERATOR — Canvas Emoji (aucune dépendance externe) ═══ */
+/*  FOOD IMAGE GENERATOR — Canvas Emoji (aucune dépendance externe)  */
 function emojiImg(emoji, size=220){
   try{
     const c = document.createElement('canvas');
@@ -2047,7 +2047,7 @@ function initFoodImages(){
   });
 }
 
-/* ═══ WAVE DOTS — Animation vague océanique ═══ */
+/*  WAVE DOTS — Animation vague océanique  */
 function initWaveDots(){
   const bg = document.getElementById('bgDecor');
   if(!bg) return;
@@ -2142,7 +2142,7 @@ function initWaveDots(){
   requestAnimationFrame(draw);
 }
 
-/* ═══ BOOT ═══ */
+/*  BOOT  */
 State.load();
 initFoodImages();
 buildClusters();
